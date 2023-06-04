@@ -11,7 +11,6 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'HEHEHAHA'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-    #Migration PostgreSQL server connection: postgres://database_vz5w_user:rjp7fQdE08pjj63PXOEhB0eqYXG0RsNT@dpg-chtl0pt269vccp6q1cig-a.singapore-postgres.render.com/database_vz5w
     db.init_app(app)
 
     from .views import views
